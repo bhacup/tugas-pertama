@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .menu {
+            background: linear-gradient(135deg, #ff6f61, #ff9a9e);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .menu div {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .menu div:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 60px 40px;
+            gap: 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: white;
+            margin-top: 60px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .biodata, .portfolio {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+            color: white;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #e05650;
+        }
+        .portfolio img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+        }
+        .biodata img, .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .menu {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1: Menu -->
+    <div class="menu">
+        <div>Header</div>
+        <div>Biodata</div>
+        <div>Portofolio</div>
+    </div>
+    <br>
+    <!-- Section 2: Judul di Kiri dan Gambar di Kanan -->
+    <section class="hero">
+        <div>
+            <h2>Selamat Datang di Website Saya</h2>
+            <p>Ini adalah contoh header dengan dua kolom, kolom kiri berisi teks seperti ini.</p>
+            <button>Pelajari lebih lanjut</button>
+        </div>
+        <img src="https://via.placeholder.com/300" alt="Gambar Hero">
+    </section>
+    <br>
+    <!-- Section 3: Biodata dengan Enam Box -->
+    <section class="biodata">
+        <h2>About Me</h2>
+        <p>A brief introduction about myself</p>
+        <img src="images/foto/profillufy.jpg" alt="Foto Profil">
+        <div class="box-container">
+            <div class="box">Fullname</div>
+            <div class="box">Education</div>
+            <div class="box">Pekerjaan</div>
+            <div class="box">Contact</div>
+            <div class="box">Hobi</div>
+            <div class="box">Alamat</div>
+        </div>
+    </section>
+    <br>
+    <!-- Section 4: Portofolio -->
+    <section class="portfolio">
+        <h2>Portofolio</h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="https://via.placeholder.com/150" alt="Proyek 1">
+                <h3>Proyek 1</h3>
+                <p>Deskripsi proyek 1</p>
+            </div>
+            <div class="box">
+                <img src="https://via.placeholder.com/150" alt="Proyek 2">
+                <h3>Proyek 2</h3>
+                <p>Deskripsi proyek 2</p>
+            </div>
+            <div class="box">
+                <img src="https://via.placeholder.com/150" alt="Proyek 3">
+                <h3>Proyek 3</h3>
+                <p>Deskripsi proyek 3</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
